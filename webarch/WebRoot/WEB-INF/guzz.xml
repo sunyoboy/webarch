@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE guzz-configs PUBLIC "-//GUZZ//DTD MAIN CONFIG//EN" "http://www.guzz.org/dtd/guzz.dtd">
+
+<guzz-configs>
+
+	<dialect class="org.guzz.dialect.Mysql5Dialect" />
+	<config-server>
+		<server class="org.guzz.config.LocalFileConfigServer">
+			<param name="resource" value="db.properties" />
+		</server>
+	</config-server>
+
+	<tran>
+		<dbgroup name="default" masterDBConfigName="masterDB" />
+		<!-- <dbgroup name="updateDB" masterDBConfigName="updateMasterDB" /> <dbgroup 
+			name="logDB" masterDBConfigName="logMasterDB" /> -->
+	</tran>
+
+
+
+	<!-- <service name="insertQueueService" configName="guzzInsertQueueService" 
+		class="org.guzz.service.db.impl.InsertQueueServiceImpl" /> <service name="slowUpdateServer" 
+		configName="guzzSlowUpdateServer" class="org.guzz.service.db.impl.SlowUpdateServerImpl" 
+		/> -->
+
+	<!-- business starts -->
+	<business dbgroup="default" interpret="" name="user"
+		class="com.slj.demo.entity.User" file="classpath:com/slj/demo/entity/mysql/User.hbm.xml" />
+	<!-- business ends -->
+
+	<sqlMap dbgroup="default">
+		<select id="select_user" orm="user" dbgroup="default">
+			select * from @@user where id = :id
+		</select>
+		
+		<update id="update_user" orm="user" dbgroup="default">
+			update @@user set password = :password where id = :id
+		</update>
+		
+		<update orm="user" id="delete_user">
+			delete from @@user where id = :id
+		</update>
+				
+
+		<orm id="user" dbgroup="default" class="com.slj.demo.entity.User"
+			table="t_user">
+			<result property="id" column="id" />
+			<result property="name" column="name" />
+			<result property="password" column="password" />
+			<result property="sex" column="sex" />
+			<result property="work" column="work" />
+		</orm>
+	</sqlMap>
+
+</guzz-configs>

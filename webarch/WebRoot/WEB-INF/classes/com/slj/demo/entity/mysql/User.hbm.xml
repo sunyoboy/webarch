@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.slj.demo.entity.User" table="t_user">
+		<id name="id" type="int" column="id">
+			<generator class="identity" />
+		</id>
+		<property name="name" type="string" column="name" />
+		<property name="password" type="string" column="password" />
+		<property name="sex" type="int" column="sex" />
+		<property name="work" type="string" column="work" />
+	</class>
+</hibernate-mapping>
+
+
+<!-- mysql: create table tb_guzz_su( gu_id bigint not null auto_increment 
+	primary key, gu_db_group varchar(32) not null, gu_tab_name varchar(64) not 
+	null, gu_inc_col varchar(64) not null , gu_tab_pk_col varchar(64) not null, 
+	gu_tab_pk_val varchar(64) not null , gu_inc_count int(11) not null )engine=Innodb 
+	; oracle 10g: CREATE SEQUENCE seq_iub_id INCREMENT BY 1 START WITH 1 ; create 
+	table tb_guzz_su( gu_id number(20) not null primary key, gu_db_group varchar(32) 
+	not null, gu_tab_name varchar(64) not null, gu_inc_col varchar(64) not null 
+	, gu_tab_pk_col varchar(64) not null, gu_tab_pk_val varchar(64) not null 
+	, gu_inc_count number(10, 0) not null ) ; -->

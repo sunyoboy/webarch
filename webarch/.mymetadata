@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="webarch"
+  id="myeclipse.1269826820250"
+  context-root="/webarch"
+  j2ee-spec="5.0"
+  archive="webarch.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

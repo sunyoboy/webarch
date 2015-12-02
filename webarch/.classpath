@@ -40,5 +40,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/servlet"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/jodd-3.6.6.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/druid-1.0.14.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Servlet_lib"/>
 	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
 </classpath>

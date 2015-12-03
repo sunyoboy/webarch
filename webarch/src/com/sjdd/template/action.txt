@@ -4,8 +4,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
+
 import #{entity_p}.#{Entity};
 import #{manager_p}.#{Entity}Service;
+import java.util.Properties;
+import com.sjdd.base.BaseAction;
+import org.springframework.stereotype.Component;
 
 @Component("#{Entity}ActionTarget")
 public class #{Entity}Action extends BaseAction<#{Entity}, #{Entity}Service> {

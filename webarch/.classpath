@@ -41,5 +41,9 @@
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/jodd-3.6.6.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/druid-1.0.14.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Servlet_lib"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-io-2.0.1.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/log4j-over-slf4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/slf4j-api-1.6.1.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-dbutils-1.6.jar"/>
 	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
 </classpath>

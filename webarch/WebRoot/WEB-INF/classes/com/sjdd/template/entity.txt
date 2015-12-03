@@ -1,0 +1,10 @@
+package #{entity_p}; 
+
+import com.sjdd.base.BaseBean ; 
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class #{Entity} extends BaseBean  implements java.io.Serializable {
+
+}

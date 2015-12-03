@@ -1,7 +1,8 @@
 package #{manager_p};
 
-
+import com.sjdd.base.IBaseService;
 import #{entity_p}.#{Entity};
+import #{dao_p}.#{Entity}Dao;
 
 public interface #{Entity}Service extends IBaseService<#{Entity}, #{Entity}Dao> {
 

@@ -47,7 +47,6 @@ public class UserDaoImpl implements UserDao {
             pstmt.setBoolean(4, user.getLocked());
             pstmt.execute();
         } catch (SQLException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         return findByUsername(user.getUsername());

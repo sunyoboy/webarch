@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE guzz-mapping PUBLIC "-//GUZZ//GUZZ MAPPING DTD//EN" "http://www.guzz.org/dtd/guzz-mapping.dtd">
+<hibernate-mapping>
+<class  name="com.sjdd.qs.entity.Class" table="qs_class">
+  <id name="no" type="int"  column="No">
+   <generator class="identity"/>
+  </id>
+  <property name="name" type="string"  column="Name"/>
+  <property name="schoolNo" type="int"  column="SchoolNo"/>
+  <property name="entryYear" type="int"  column="EntryYear"/>
+  <property name="gradeLevel" type="int"  column="gradeLevel"/>  
+ </class>
+</hibernate-mapping>

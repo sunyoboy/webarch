@@ -1,7 +1,7 @@
 package #{dao_p};
 
 
-import #{entity_p}.#{Entity};
+import com.sjdd.base.IBaseDao ;
 
 public interface #{Entity}Dao extends IBaseDao {
 }

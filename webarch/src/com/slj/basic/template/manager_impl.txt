@@ -2,6 +2,8 @@ package #{manager_impl_p};
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.sjdd.base.BaseServiceImpl;
 import #{dao_p}.#{Entity}Dao;
 import #{entity_p}.#{Entity};
 import #{manager_p}.#{Entity}Service;

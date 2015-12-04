@@ -1,0 +1,26 @@
+package ${entity_p}; 
+
+import com.sjdd.base.BaseBean ; 
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class ${entityName} extends BaseBean  implements java.io.Serializable {
+	
+<#list columns as column>
+	private ${column.propertyType} ${column.propertyName?uncap_first};
+	
+</#list>
+
+<#list columns as col>
+	public void set${col.propertyName?cap_first}(${col.propertyType} ${col.propertyName?uncap_first}) {
+		this.${col.propertyName?uncap_first} = ${col.propertyName?uncap_first};
+	}
+	
+	public ${col.propertyType} get${col.propertyName?cap_first}() {
+		return this.${col.propertyName?uncap_first};
+	}
+		
+</#list>
+	
+}

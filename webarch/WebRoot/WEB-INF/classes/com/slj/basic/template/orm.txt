@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE guzz-mapping PUBLIC "-//GUZZ//GUZZ MAPPING DTD//EN" "http://www.guzz.org/dtd/guzz-mapping.dtd">
+<hibernate-mapping>
+ <class  name="${entity_p}.${entityName}" table="${name}">
+<#list columns as column>
+  <#if column.columnKey == "PRI">
+  	<id name="${column.propertyName}" type="${column.type}"  column="${column.field}" >
+    	<generator class="identity"/>
+  	</id>
+  <#else>
+  	<property name="${column.propertyName}" type="${column.type}"  column="${column.field}"/>
+  </#if>
+</#list>
+ </class>
+</hibernate-mapping>

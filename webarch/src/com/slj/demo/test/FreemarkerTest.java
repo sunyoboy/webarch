@@ -43,7 +43,7 @@ public class FreemarkerTest {
         // 2、为数据模型添加值
         root.put("username", "张三");
         // 3、将数据模型和模板组合的数据输出到控制台
-        fu.print("ftl_01.ftl", root);
+        fu.print("src/com/slj/demo/test/","ftl_01.ftl", root);
         // fu.fprint("ftl_01.ftl", root, "01.html");
     }
     

@@ -1,6 +1,7 @@
 package #{dao_impl_p};
 
 import org.springframework.stereotype.Repository;
+import com.sjdd.base.BaseDao ;
 
 import #{dao_p}.#{Entity}Dao;
 

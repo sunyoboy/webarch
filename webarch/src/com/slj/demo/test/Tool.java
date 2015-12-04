@@ -10,6 +10,8 @@
  */
 package com.slj.demo.test;
 
+import java.util.Collection;
+
 /**
  * 〈一句话功能简述〉<br> 
  * 〈功能详细描述〉
@@ -30,4 +32,6 @@ public class Tool {
     org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer ds;
     
     freemarker.template.utility.XmlEscape xml;
+    Collection dc;
+    java.util.Locale dd ;
 }

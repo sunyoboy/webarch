@@ -38,8 +38,8 @@
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/xalan.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/xercesImpl.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/servlet"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/jodd-3.6.6.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/druid-1.0.14.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/jodd-3.6.6.jar" sourcepath="D:/tmp/jodd-3.6.6-dist/jodd-3.6.6-sources.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/druid-1.0.14.jar" sourcepath="E:/04-source/druid-1.0.16-sources"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Servlet_lib"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-io-2.0.1.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/log4j-over-slf4j-1.6.1.jar"/>

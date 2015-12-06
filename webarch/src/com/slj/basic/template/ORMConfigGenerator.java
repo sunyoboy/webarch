@@ -131,7 +131,10 @@ public class ORMConfigGenerator {
             } else if (column.getType().indexOf("int") > -1) {
                 column.setType("int");
                 column.setPropertyType("int");
-            } 
+            } else if (column.getType().indexOf("float") > -1) {
+                column.setType("float");
+                column.setPropertyType("float");
+            }
         }
         return columnList;
     }

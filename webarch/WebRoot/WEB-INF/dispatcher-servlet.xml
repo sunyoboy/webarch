@@ -27,7 +27,7 @@
 
 	<!-- <bean name="/user" class="com.slj.demo.controller.UserController" /> -->
 
-	<context:component-scan base-package="com.slj" />
+	<context:component-scan base-package="com.slj.demo" />
 
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">

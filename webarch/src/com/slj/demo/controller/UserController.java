@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.slj.basic.util.Util;
 import com.slj.demo.entity.User;
 import com.slj.demo.service.UserService;
 
@@ -78,4 +79,15 @@ public class UserController {
         mv.setViewName("ftl_03");
         return mv;
     }
+    
+    @RequestMapping(value = "/page", method = RequestMethod.GET)
+    public ModelAndView query() {
+        // map.put("name", "sunlj");
+        ModelAndView mv = new ModelAndView();
+        Util util = new Util();
+        // User user = this.getUserService().getById(id);
+        mv.addObject("page", util.queryTables(1, 10, "goods"));
+        mv.setViewName("page");
+        return mv;
+    }    
 }

@@ -30,9 +30,9 @@ public class DbUtil {
     
     static {
         dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-        dataSource.setUsername("school");
-        dataSource.setPassword("school");
-        dataSource.setUrl("jdbc:mysql://localhost:3306/region");
+        dataSource.setUsername("flower");
+        dataSource.setPassword("flower");
+        dataSource.setUrl("jdbc:mysql://localhost:3306/flower");
         dataSource.setInitialSize(5);
         dataSource.setMinIdle(1);
         dataSource.setPoolPreparedStatements(false);
@@ -54,7 +54,7 @@ public class DbUtil {
     }
     
     public static void main(String[] args) {
-        String sql = "select * from sys_users";
+        String sql = "select * from goods ";
         Connection conn = getConnection();
         PreparedStatement pstmt = null;
         ResultSet rs = null;
@@ -66,7 +66,7 @@ public class DbUtil {
                 System.out.print(rs.getString(2) + "\t");
                 System.out.print(rs.getString(3) + "\t");
                 System.out.print(rs.getString(4) + "\t");
-                System.out.print(rs.getString(5) + "\t");
+                System.out.println(rs.getString(5) + "\t");
             }
         } catch (SQLException e) {
             // TODO Auto-generated catch block

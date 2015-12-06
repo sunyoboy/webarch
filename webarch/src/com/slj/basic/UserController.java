@@ -26,7 +26,6 @@ import com.slj.basic.service.impl.UserServiceImpl;
  * @see 
  * @since 1.0
  */
-@Controller
 public class UserController {
     
     private UserService userService = new UserServiceImpl();
@@ -35,7 +34,6 @@ public class UserController {
         return userService;
     }
     
-    @Autowired
     public void setUserService(UserService userService) {
         this.userService = userService;
     }

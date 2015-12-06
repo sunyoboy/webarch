@@ -233,9 +233,9 @@ public class ModuleGenerator {
         mg.generate();
 
         ORMConfigGenerator generator = new ORMConfigGenerator();
-        List<Table> tableList = generator.queryTables("qsoccer");
+        List<Table> tableList = generator.queryTables("flower");
         for (Table t : tableList) {
-            mg.generateHbmFile(generator.getColumns(t.getName(), "qsoccer"), t.getName());
+            mg.generateHbmFile(generator.getColumns(t.getName(), "flower"), t.getName());
         }
     }
 }

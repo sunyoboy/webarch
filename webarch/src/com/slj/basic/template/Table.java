@@ -57,4 +57,12 @@ public class Table implements Serializable
     public void setColumnList(List<Column> columnList) {
         this.columnList = columnList;
     }
+
+    @Override
+    public String toString() {
+        return "Table [name=" + name + ", entityName=" + entityName
+                + ", columnList=" + columnList + "]";
+    }
+    
+    
 }

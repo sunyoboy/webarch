@@ -4,11 +4,11 @@
  <class  name="${entity_p}.${entityName}" table="${name}">
 <#list columns as column>
   <#if column.columnKey == "PRI">
-  	<id name="${column.propertyName}" type="${column.type}"  column="${column.field}" >
+  	<id name="${column.propertyName?uncap_first}" type="${column.type}"  column="${column.field}" >
     	<generator class="identity"/>
   	</id>
   <#else>
-  	<property name="${column.propertyName}" type="${column.type}"  column="${column.field}"/>
+  	<property name="${column.propertyName?uncap_first}" type="${column.type}"  column="${column.field}"/>
   </#if>
 </#list>
  </class>

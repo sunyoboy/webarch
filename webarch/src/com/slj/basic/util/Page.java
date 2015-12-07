@@ -91,7 +91,17 @@ public class Page<T> implements Serializable {
 		this.endRow = endRow;
 	}	
 
-	public List<T> getResultList() {
+	public int getFirstPage() {
+	    setPageNum(1);
+        return pageNum;
+    }
+
+    public int getLastPage() {
+        setPageNum(totalPage);
+        return pageNum;
+    }
+
+    public List<T> getResultList() {
 		return resultList;
 	}
 

@@ -45,6 +45,6 @@
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/log4j-over-slf4j-1.6.1.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/slf4j-api-1.6.1.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-dbutils-1.6.jar" sourcepath="E:/02-resources/lib/commons-dbutils-1.6-bin/commons-dbutils-1.6/commons-dbutils-1.6-sources.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/pager-taglib.jar" sourcepath="C:/Users/sunlj/Downloads/pager-taglib-2.0-src"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/pager-taglib.jar"/>
 	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
 </classpath>

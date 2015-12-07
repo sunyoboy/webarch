@@ -112,7 +112,7 @@ public class Util {
     
     public static void main(String[] args) {
         Util util = new Util();
-        Page<Goods> page = util.queryTables(1, 10, "goods");
+        Page<Goods> page = util.queryTables(1, 3, "goods");
         List<Goods> gList = page.getResultList();
         for(Goods good : gList) {
         	System.out.println("花==> " + good.toString());
@@ -125,6 +125,22 @@ public class Util {
         for(Goods good : list) {
         	System.out.println("花==> " + good.toString());
         }
+        
+        page.getFirstPage();
+        page = util.queryTables(page.getNextPage(), page.getPageSize(), "goods");
+        list = page.getResultList();
+        System.out.println(list.size());
+        for(Goods good : list) {
+            System.out.println("花==> " + good.toString());
+        }
+        
+        page.getLastPage();
+        page = util.queryTables(page.getNextPage(), page.getPageSize(), "goods");
+        list = page.getResultList();
+        System.out.println(list.size());
+        for(Goods good : list) {
+            System.out.println("花==> " + good.toString());
+        }            
     }
 
 }

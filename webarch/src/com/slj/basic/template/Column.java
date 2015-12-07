@@ -81,5 +81,12 @@ public class Column implements Serializable {
     public void setExtra(String extra) {
         this.extra = extra;
     }
+
+    @Override
+    public String toString() {
+        return "Column [field=" + field + ", type=" + type + ", propertyType="
+                + propertyType + ", propertyName=" + propertyName
+                + ", columnKey=" + columnKey + ", extra=" + extra + "]";
+    }
     
 }

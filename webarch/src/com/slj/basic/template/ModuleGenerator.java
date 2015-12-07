@@ -200,7 +200,7 @@ public class ModuleGenerator {
     }
 
     public void generate() {
-        loadProperties();
+        // loadProperties();
         prepareFile();
         prepareTemplate();
         writeFile();
@@ -230,12 +230,20 @@ public class ModuleGenerator {
         String packName = "com.slj.basic.template";
         String fileName = "template.properties";
         ModuleGenerator mg = new ModuleGenerator(packName, fileName);
-        mg.generate();
+        mg.loadProperties();
 
         ORMConfigGenerator generator = new ORMConfigGenerator();
-        List<Table> tableList = generator.queryTables("flower");
+        List<Table> tableList = generator.queryTables("qsoccer");
         for (Table t : tableList) {
-            mg.generateHbmFile(generator.getColumns(t.getName(), "flower"), t.getName());
+            String entityName = t.getName()
+                    .substring(t.getName().indexOf("_") + 1);
+            t.setEntityName(entityName);
+            t.setColumnList(generator.getColumns(t.getName(), "qsoccer"));
+            mg.generateHbmFile(t.getColumnList(), t.getName());
+            mg.prop.setProperty("Entity", ORMConfigGenerator.captureLetter(t.getEntityName()));
+            mg.prop.setProperty("entity_param", t.getEntityName());
+            mg.prop.setProperty("config_entity", t.getEntityName());
+            mg.generate();
         }
     }
 }

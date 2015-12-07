@@ -55,8 +55,6 @@ public class ORMConfigGenerator {
         } catch (IOException e) {
             LOG.error("load druid.properties error", e);
         }
-        
-        
     }
 
     /*

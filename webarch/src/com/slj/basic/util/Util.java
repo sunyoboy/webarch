@@ -117,9 +117,9 @@ public class Util {
         for(Goods good : gList) {
         	System.out.println("»¨==> " + good.toString());
         }
-        page.getNextPage();
-        page = util.queryTables(page.getNextPage(), page.getPageSize(), "goods");
         
+        page.getNextPage();
+        page = util.queryTables(page.getPageNum(), page.getPageSize(), "goods");
         List<Goods> list = page.getResultList();
         System.out.println(list.size());
         for(Goods good : list) {
@@ -127,7 +127,7 @@ public class Util {
         }
         
         page.getFirstPage();
-        page = util.queryTables(page.getNextPage(), page.getPageSize(), "goods");
+        page = util.queryTables(page.getPageNum(), page.getPageSize(), "goods");
         list = page.getResultList();
         System.out.println(list.size());
         for(Goods good : list) {
@@ -135,7 +135,7 @@ public class Util {
         }
         
         page.getLastPage();
-        page = util.queryTables(page.getNextPage(), page.getPageSize(), "goods");
+        page = util.queryTables(page.getPageNum(), page.getPageSize(), "goods");
         list = page.getResultList();
         System.out.println(list.size());
         for(Goods good : list) {

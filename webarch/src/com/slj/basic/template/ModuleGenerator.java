@@ -233,14 +233,18 @@ public class ModuleGenerator {
         mg.loadProperties();
 
         ORMConfigGenerator generator = new ORMConfigGenerator();
-        List<Table> tableList = generator.queryTables("flower");
+        List<Table> tableList = generator.queryTables(generator.getProperty(
+                "url").substring(
+                generator.getProperty("url").lastIndexOf("/") + 1));
         for (Table t : tableList) {
             String entityName = t.getName()
                     .substring(t.getName().indexOf("_") + 1);
             t.setEntityName(entityName);
-            t.setColumnList(generator.getColumns(t.getName(), "flower"));
-            mg.generateHbmFile(t.getColumnList(), t.getName());
-            mg.prop.setProperty("Entity", ORMConfigGenerator.captureLetter(t.getEntityName()));
+
+            mg.generateHbmFile(generator.getColumns(t.getName(), "qsoccer"),
+                    t.getName());
+            mg.prop.setProperty("Entity",
+                    ORMConfigGenerator.captureLetter(t.getEntityName()));
             mg.prop.setProperty("entity_param", t.getEntityName());
             mg.prop.setProperty("config_entity", t.getEntityName());
             mg.generate();

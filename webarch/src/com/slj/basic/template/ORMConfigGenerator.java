@@ -69,6 +69,10 @@ public class ORMConfigGenerator {
         }
         return dataSource;
     }
+    
+    public String getProperty(String key) {
+        return DRUID_PROPERTIES.getProperty(key);
+    }
 
     /* 查询dbName数据库中的所有表  */
     public List<Table> queryTables(String dbName) {
